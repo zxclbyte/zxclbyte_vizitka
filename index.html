@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.6">
+        <meta name="description" content="визитка">
+        <link href="https://media.istockphoto.com/id/1231977703/pl/wektor/logotyp-l-zginanych-liter-linii.jpg?s=612x612&w=0&k=20&c=Tx_DsCPfLz9p2aq_pMHthQ2RlybXZz1GG1uX2a2E4pE=" rel="icon">
+        <link href="css/style.css" rel="stylesheet">
+        <title>дефолтная визитка</title>
+    </head>
+    <body>
+        <div id="donate" style="display: none;">
+            <div class="popup">
+                <p>на сколько уверен?</p>
+                <div class="field">
+                    <input class="field__input" id="donate_ammount" type="number" placeholder="100" min="1" max="10000" value="100">
+                </div>
+            </div>
+        </div>
+        <main>
+            <div class="info">
+                <img src="assets/images/avatar.png" alt="avatar.png">
+                <p><b><span class="color">zxclbyte</span></b>,  <span id="typed"></span></p>
+                <span>тут типа должно быть описание, но я уебище</span>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href="https://t.me/lbytebtw">TELEGRAM</a></li>
+                    <li><span class="color">•</span></li>
+                    <li><a href="https://www.instagram.com/_zxclbyte">INSTAGRAM</a></li>
+                    <li><span class="color">•</span></li>
+                    <li><a href="https://discord.gg/tE8wSMCEXn">DISCORD</a></li>
+                    <li><span class="color">•</span></li>
+                    <li><a href="https://www.tiktok.com/@_zxclbyte">TIKTOK</a></li>
+                    <li><span class="color">•</span></li>
+                    <li><a id="button" href="index.html#">ЯНАСОЛЯХ</a></li>
+                </ul>
+            </div>
+        </main>
+        <canvas id="canvas"></canvas>
+    </body>
+    <script src="js/particles.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).click(function(event) {
+            if (document.getElementById("donate").style.display != "none") {
+                if (!$(event.target).closest(".popup").length) {
+                    return $("#donate").fadeOut();
+                }
+            }
+
+            if ($(event.target).closest("#button").length) {
+                return $("#donate").fadeIn();
+            }
+        });
+
+        var typed = new Typed(
+            '#typed', {
+                strings: [" максим", " depressed", "hvh бой", "кряк никсвара", "хетемел кодер", "катя женись на мне", "я чурка", "ашка на столе"],
+                typeSpeed: 50,
+                backSpeed: 30,
+                showCursor: true,
+                loop: true
+            }
+        );
+    </script>
+</html>
