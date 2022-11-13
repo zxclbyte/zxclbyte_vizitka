@@ -1,6 +1,6 @@
 function resize() {
-    canvas.width = document.documentElement.clientWidth;
-    canvas.height = document.documentElement.clientHeight;
+    canvas.width = 2000
+    canvas.height = 2000
 }
 
 function randX() {
